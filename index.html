@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Galaxian Wars 3D</title>
+    
+    <link type="text/css" rel="stylesheet" href="rasterize.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn1.iconfinder.com/data/icons/materia-space/24/015_006_spaceship_starwars_space_starwars-512.png">
+    
+    
+  </head>
+
+  <body>
+    <div id="menuDiv" style="text-align: center;">
+      <h1>Galaxian Wars 3D</h1>
+    <img id="poster" src="./photos/roguePoster.png" alt="Game Preview Image">
+    <div class="button-container">
+        <button onclick="main()">2.5D Game</button>
+        <button onclick="startGame('3d')">3D Game</button>
+        <button title="This browser does not support WebXR" disabled=true id="vr-button" onclick="startGame('vr')">4D (VR) Game</button>
+    </div>
+    </div>
+
+
+    <div style="display: none;" id="webglDiv">
+      <div style="display: block; position: absolute; left: 35%; top: 20px; z-index: 1000;">
+        <!-- <span>Score: </span> -->
+        <span style="font-size: 2rem; color: white; font-family: myFirstFont; font-weight: bold;" id="score"></span>
+      </div>
+      <div style="display: none; position: absolute; left: 0%; top: 25%; z-index: 1000; text-align: center; width: 100%;" id="NextLevel">
+        <!-- <span>Score: </span> -->
+        <span style="font-size: 6rem; color: white; font-family: myFirstFont; font-weight: bold;" >Next Level</span>
+      </div>
+      <div style="display: none; position: absolute; left: 0%; top: 25%; z-index: 1000; text-align: center; width: 100%;" id="GameOver">
+        <!-- <span>Score: </span> -->
+        <div>
+          <span style="font-size: 6rem; color: white; font-family: myFirstFont; font-weight: bold;" >Game Over</span>
+        </div>
+        <div style="margin-top: 4rem;">
+          <button onClick="window.location.reload();" class="retry-button">Retry?</button>
+        </div>
+        
+      </div>
+      
+    <div style="width: 100%; display: flex; justify-content: center;">
+      <canvas style="display: none;" id="myImageCanvas" width="900" height="900"></canvas>
+      <canvas id="myWebGLCanvas" width="900" height="900"></canvas> 
+      </div>
+      
+      <div style="display: none; margin-left:1024px; position: absolute; right: 60px; top: 80px; width: 100px">
+        <span>Time: </span>
+        <span  id="time"></span>
+    </div>
+    
+  </div>
+  <div style="display: block; margin-left:1024px; position: absolute; right: 60px; top: 40px; width: 100px">
+    <span  style="display: none"id="fps"></span>
+    <button id="mute" onclick="toggleMute()">mute</button>
+</div>
+  <script type="text/javascript" src="gl-matrix.js"></script>
+  <script type="text/javascript" src="rasterize.js"></script>
+  </body>
+</html>

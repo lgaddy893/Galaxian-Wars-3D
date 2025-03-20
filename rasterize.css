@@ -1,0 +1,97 @@
+#myWebGLCanvas {
+    position: absolute;
+    /* left: 0px; */
+    top: 0px;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#myImageCanvas {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(upheavttFont.ttf   );
+    font-weight: bold;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1e1e2e;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#poster {
+    max-width: 80%;
+    min-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+    /* border: 5px solid #fff; */
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-container button:disabled {
+    background-color: gray !important
+}
+
+.button-container button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.retry-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.retry-button:hover {
+    background-color: #45a049;
+}
+
+.retry-button:active {
+    background-color: #3e8e41;
+}
+
+.button-container button:hover {
+    background-color: #45a049;
+}
+
+.button-container button:active {
+    background-color: #3e8e41;
+}
